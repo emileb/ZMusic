@@ -21,6 +21,7 @@ $(LOCAL_PATH)/../thirdparty/oplsynth/oplsynth \
 $(LOCAL_PATH)/../thirdparty/timidity \
 $(LOCAL_PATH)/../thirdparty/timidityplus \
 $(LOCAL_PATH)/../thirdparty/wildmidi \
+$(LOCAL_PATH)/../thirdparty/miniz \
 $(LOCAL_PATH)/../thirdparty/game-music-emu \
 $(TOP_DIR)/AudioLibs_OpenTouch/fluidsynth-lite/include \
 $(TOP_DIR)/AudioLibs_OpenTouch/libsndfile-android/jni/ \
@@ -45,6 +46,7 @@ LOCAL_SRC_FILES =  	\
 	midisources/midisource_smf.cpp \
 	midisources/midisource_hmi.cpp \
 	midisources/midisource_xmi.cpp \
+	streamsources/music_libxmp.cpp \
 	streamsources/music_dumb.cpp \
 	streamsources/music_gme.cpp \
 	streamsources/music_libsndfile.cpp \
@@ -59,9 +61,11 @@ LOCAL_SRC_FILES =  	\
 	zmusic/configuration.cpp \
 	zmusic/zmusic.cpp \
 	zmusic/critsec.cpp \
-	loader/test.c
+	loader/test.c \
+	../thirdparty/miniz/miniz.c
 
-LOCAL_STATIC_LIBRARIES := zlib_zm oplsynth_zm  opnmidi_zm timidity_zm timidityplus_zm wildmidi_zm adlmidi_zm gme_zm dumb_zm  sndfile mpg123 fluidsynth-static
+
+LOCAL_STATIC_LIBRARIES :=  xmp_zm oplsynth_zm  opnmidi_zm timidity_zm timidityplus_zm wildmidi_zm adlmidi_zm gme_zm dumb_zm  sndfile mpg123 fluidsynth-static
 
 
 include $(BUILD_SHARED_LIBRARY)

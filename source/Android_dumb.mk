@@ -91,6 +91,7 @@ LOCAL_SRC_FILES =  	\
     src/it/readxm.c \
     src/it/readxm2.c \
     src/it/xmeffect.c \
+    src/it/readamf.c \
 
 
 include $(BUILD_STATIC_LIBRARY)
