@@ -23,7 +23,7 @@ $(LOCAL_PATH)/../thirdparty/timidityplus \
 $(LOCAL_PATH)/../thirdparty/wildmidi \
 $(LOCAL_PATH)/../thirdparty/game-music-emu \
 $(LOCAL_PATH)/../thirdparty/miniz \
-$(TOP_DIR)/AudioLibs_OpenTouch/fluidsynth-lite/include \
+$(TOP_DIR)/AudioLibs_OpenTouch/fluidsynth/src/main/jni/fluidsynth-android/include \
 $(TOP_DIR)/AudioLibs_OpenTouch/libsndfile-android/jni/ \
 $(TOP_DIR)/AudioLibs_OpenTouch/libmpg123 \
 
@@ -64,8 +64,8 @@ LOCAL_SRC_FILES =  	\
 	../thirdparty/miniz/miniz.c \
 	loader/test.c
 
-LOCAL_STATIC_LIBRARIES := xmp_zm oplsynth_zm  opnmidi_zm timidity_zm timidityplus_zm wildmidi_zm adlmidi_zm gme_zm dumb_zm  sndfile mpg123 fluidsynth-static
-LOCAL_SHARED_LIBRARIES := saffal
+LOCAL_STATIC_LIBRARIES := xmp_zm oplsynth_zm  opnmidi_zm timidity_zm timidityplus_zm wildmidi_zm adlmidi_zm gme_zm dumb_zm  sndfile mpg123
+LOCAL_SHARED_LIBRARIES := saffal fluidsynth
 
 LOCAL_LDFLAGS += -Wl,--gc-sections -flto
 
